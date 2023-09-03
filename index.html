@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cotización de Seguro de Vehículos</title>
+    <!-- Incluyendo Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluyendo jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Cotización de Seguro de Vehículos</h1>
+        <form id="formCotizacion">
+            <div class="form-group">
+                <label for="marca">Marca del vehículo</label>
+                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca del vehículo">
+                <div id="noResultados" class="text-danger" style="display: none;">No se encontraron resultados</div>
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo del vehículo</label>
+                <input type="text" class="form-control" id="modelo" placeholder="Ingrese el modelo del vehículo">
+            </div>
+            <div class="form-group">
+                <label for="anio">Año del vehículo</label>
+                <select class="form-control" id="anio">
+                    <option value="">Seleccione el año</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tipoSeguro">Tipo de Seguro</label>
+                <select class="form-control" id="tipoSeguro">
+                    <option value="basico">Básico</option>
+                    <option value="estandar">Estándar</option>
+                    <option value="premium">Premium</option>
+                </select>
+            </div>
+            
+            <button type="button" class="btn btn-primary" id="botonCotizar">Cotizar</button>
+            <button type="button" class="btn btn-secondary ml-2" id="botonLimpiar">Limpiar</button>
+        </form>
+
+        <div id="resultadoCotizacion" class="mt-4" style="display: none;"></div>
+
+        <div id="mensajeError" class="text-danger mt-4" style="display: none;"></div>
+
+        <button type="button" class="btn btn-info mt-2" id="botonMostrarCotizaciones">Mostrar Cotizaciones
+            Guardadas</button>
+
+        <div id="cotizacionesGuardadas" class="mt-4" style="display: none;">
+            <h3>Cotizaciones Guardadas:</h3>
+            <ul id="listaCotizaciones">
+            </ul>
+        </div>
+    </div>
+    <!-- Incluyendo jQuery y jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Incluyendo Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Incluyendo el archivo JavaScript personalizado -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
